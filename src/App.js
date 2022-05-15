@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+// Components
+import Header from "./components/Header";
+import Footer from './components/Footer';
+import {Route, Routes} from "react-router-dom";
+
+// Pages
+import IM from "./pages/IM";
+import Main from "./pages/Main";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import Translate from "./pages/Translate"
+
 
 function App() {
+  const URL = "BACKEND"
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Routes>
+        <Route exact path="/" element={<Main/>}/>
+        <Route path="/IM" element={<IM URL={URL}/>}/>
+        <Route path="/register" element={<Register URL={URL}/>}/>
+        <Route path="/login" element={<Login URL={URL}/>}/>
+        <Route path="/translate" element={<Translate URL={URL}/>}/>
+      </Routes>
+      <Footer/>
     </div>
   );
 }
