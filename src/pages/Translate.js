@@ -1,9 +1,27 @@
-const axios = require("axios");
+import {useState} from 'react';
+import Textbox from "../components/translate/Textbox";
+import Swap from '../components/translate/Swap';
+import './Translate.css';
+
+
 
 function Translate() {
-  const [detectLanguage, setDetectLanguage] = useState(null);
+  const [inputLanguage, setInputLanguage] = useState("en");
+  const [outputLanguage, setOutputLanguage] = useState("es");
 
-    return <h1>Translate</h1>;
+  function swapLanguage() {
+    setInputLanguage(outputLanguage);
+    setOutputLanguage(inputLanguage);
   }
+  return (
+    <div className='translate'>
+      <Textbox selectedLanguage={inputLanguage} className='input'/>
+      <button className='swap-container' onClick={swapLanguage}>  
+        <Swap/>
+      </button>
+      <Textbox selectedLanguage={outputLanguage} className='output'/>
+    </div>
+  ) 
+}
   
   export default Translate;
