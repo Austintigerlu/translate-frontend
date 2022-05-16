@@ -1,27 +1,57 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import abbreviations from './abbreviations';
+
 // props.setLanguage
 function Select(props){
   // const [languageOptions, setLanguageOptions] = useState(null);
   const setLanguage = props.selectedLanguage
-
+  
+  const [language, languageOptions] = useState(null)
+  
   function handleChange(e){
     setLanguage(e.target.value)
   }
 
+
+const options = {
+  method: 'GET',
+  url: 'https://google-translate1.p.rapidapi.com/language/translate/v2/languages',
+  headers: {
+    'Accept-Encoding': 'application/gzip',
+    'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com',
+    'X-RapidAPI-Key': '3c5a11d66bmsh65e83ecaec2e36ap1cec7djsn9c8049b07f5c'
+  }
+};
+
+const getList = async() => {
+  fetch(options.url, options)
+  .then(response => response.json())
+  .then(response => languageOptions(response.data.languages))
+  .catch(err => console.error(err));
+}
+useEffect(()=>{
+  getList()
+}, [])
+
+
+const loaded = () => {
+  const mapping = language.map((lang, i) => {
+    const abbrev = lang.language
     return (
-      <div className="select">
+      <>
+        <option key={i} value={abbrev}>{abbreviations[abbrev]}</option>
+      </>
+    )
+  })
+  return (
+    <div className="select">
         <select onChange={handleChange}>
-          <option value="en">English</option>
-          <option value="es">Spanish</option>
-          <option value="fr">French</option>
-          <option value="zh-CN">Chinese</option>
-          <option value="ja">Japanese</option>
-          <option value="ko">Korean</option>
-          <option value="sv">Swedish</option>
-          <option value="pl">Polish</option>
+          {mapping}
         </select>
       </div>
-    )
+  )
+}
+    return language ? loaded() : <h1>Loading...</h1>
   } 
   
-  export default Select
+export default Select
