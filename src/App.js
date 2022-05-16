@@ -13,7 +13,7 @@ import Translate from "./pages/Translate"
 import './App.css';
 
 function App() {
-  const URL = "BACKEND"
+  const URL= "https://backend-translate-app.herokuapp.com/"
   return (
     <div className="App">
       <Header/>
