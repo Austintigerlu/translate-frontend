@@ -1,0 +1,32 @@
+.translate{
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+select{
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 5px;
+    box-sizing: content-box;
+    height: 25px;
+    padding-right: 230px;
+}
+
+textarea{
+    margin: 5px;
+    padding: 5px;
+    width: 300px;
+    height: 200px;
+    overflow: auto;
+}
+
+.swap-container{
+    width: 5%;
+}
+
+.swap-img{
+    width: 100%;
+}
+
