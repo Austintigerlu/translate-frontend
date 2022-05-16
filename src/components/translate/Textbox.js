@@ -8,6 +8,8 @@ function Textbox(props){
             <textarea
                 placeholder={props.className === 'input' ? 'Enter Text' : 'Translation'}
                 disabled={props.className !== 'input'}
+                onChange={(e) => props.setText(e.target.value)}
+                value={props.className === 'input' ? props.textToTranslate : props.translatedText}
             />
         </div>
     )

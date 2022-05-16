@@ -11,7 +11,7 @@ select{
     margin: 5px;
     box-sizing: content-box;
     height: 25px;
-    padding-right: 230px;
+    padding-right: 123px;
 }
 
 textarea{
@@ -20,6 +20,7 @@ textarea{
     width: 300px;
     height: 200px;
     overflow: auto;
+    font-size: 14px;
 }
 
 .swap-container{
@@ -30,3 +31,6 @@ textarea{
     width: 100%;
 }
 
+.translateButton{
+    height: 250px;
+}
