@@ -19,7 +19,7 @@ const options = {
   headers: {
     'Accept-Encoding': 'application/gzip',
     'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com',
-    'X-RapidAPI-Key': '3c5a11d66bmsh65e83ecaec2e36ap1cec7djsn9c8049b07f5c'
+    'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
   }
 };
 

@@ -4,11 +4,13 @@ import Swap from '../components/translate/Swap';
 import './Translate.css';
 import axios from "axios";
 
+
 function Translate() {
   const [inputLanguage, setInputLanguage] = useState("af");
   const [outputLanguage, setOutputLanguage] = useState("af");
   const [textToTranslate, setTextToTranslate] = useState("");
   const [translatedText, setTranslatedText] = useState("");
+
   // function swapLanguage() {
   //   setInputLanguage(outputLanguage);
   //   setOutputLanguage(inputLanguage);
@@ -30,7 +32,7 @@ function Translate() {
       'content-type': 'application/x-www-form-urlencoded',
       'Accept-Encoding': 'application/gzip',
       'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com',
-      'X-RapidAPI-Key': '3c5a11d66bmsh65e83ecaec2e36ap1cec7djsn9c8049b07f5c'
+      'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
     },
     data: encodedParams
   };
