@@ -12,7 +12,7 @@ function Login(props) {
       password: form[1].value
     }
 
-    fetch(props.URL+'/users/login', {
+    fetch(props.URL+'users/login', {
       method: 'POST',
       headers: {
         "Content-type": "application/json"
@@ -26,22 +26,23 @@ function Login(props) {
   }
 
   useEffect(()=> {
-    fetch(props.URL+'/users/username', {
+    fetch(props.URL+'users/isUserAuth', {
       headers: {
-        "access-token": localStorage.getItem('token')
+        "x-access-token": localStorage.getItem('token')
       }
     })
     .then(res => res.json())
     .then(data => data.isLoggedIn)
-  })
+  }, [props.URL])
 
     return (
       <form onSubmit={e => handleLogin(e)}>
-        <label for="email">Email: </label>
-        <input id='email' required type="email"/>
+        <label for="username">Username: </label>
+        <input id='username' required type="username"/>
         <br></br>
         <label for="password">Password: </label>
         <input id="password" required type="password"/>
+        <input type="submit" value="Submit"/>
       </form>
     )
   }
