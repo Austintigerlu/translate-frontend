@@ -24,6 +24,7 @@ function Translate() {
     encodedParams.append("q", textToTranslate);
     encodedParams.append("target", outputLanguage);
     encodedParams.append("source", inputLanguage);
+    encodedParams.append("format", "text");
 
     const options = {
     method: 'POST',
