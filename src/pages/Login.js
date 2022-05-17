@@ -25,20 +25,25 @@ function Login(props) {
       localStorage.setItem("token", data.token)
       setError(data.message)
     } catch(err){
+      console.log(error)
       setError(err)
     }
   }
 
-  // useLayoutEffect(()=> {
-  //   fetch(props.URL+'users/username', {
-  //     headers: {
-  //       "access-token": localStorage.getItem('token')
-  //     }
-  //   })
-  //   .then(res => res.json())
-  //   .then(data => data.isLoggedIn ? navigate('/home'): null)
-  //   .catch(err => setError(err))
-  // }, [navigate, props.URL])
+  useLayoutEffect(()=> {
+    fetch(props.URL+'users/username', {
+      headers: {
+        "x-access-token": localStorage.getItem('token')
+      }
+    })
+    .then(res => {
+      console.log(res)
+      return res.json()})
+    .then(data => {
+      console.log(data);
+      return data.isLoggedIn ? navigate('/'): null})
+    .catch(err => setError(err))
+  }, [navigate])
 
     return (
       <div>
