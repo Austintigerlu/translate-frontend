@@ -37,9 +37,11 @@ function Login(props) {
 
     return (
       <form onSubmit={e => handleLogin(e)}>
-        <input required type="email"/>
-        <input required type="password"/>
-        <input type="submit" value="Submit"/>
+        <label for="email">Email: </label>
+        <input id='email' required type="email"/>
+        <br></br>
+        <label for="password">Password: </label>
+        <input id="password" required type="password"/>
       </form>
     )
   }

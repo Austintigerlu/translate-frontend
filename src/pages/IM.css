@@ -1,0 +1,30 @@
+.IM{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.message-display{
+    flex-direction: column;
+    width: 35vw;
+    
+}
+.left, .right{
+    /* width: fit-content; */
+    width: 50%;
+    border-radius: 20px;
+}
+.left{
+    display: flex;
+    background-color: blue;
+    justify-content: center;
+}
+.right{
+    margin-left: 50%;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+}
+h1{
+
+}
