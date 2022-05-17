@@ -14,18 +14,18 @@ function Login(props) {
       password: form[1].value
     }
     try{
-      const res =await fetch(props.URL+'/users/login', {
+      const res =await fetch(props.URL+'users/login', {
         method: "POST",
         headers: {
           "Content-type": "application/json"
         },
         body: JSON.stringify(user)
       })
+      console.log(res)
       const data = await res.json()
       localStorage.setItem("token", data.token)
       setError(data.message)
     } catch(err){
-      console.log(error)
       setError(err)
     }
   }
