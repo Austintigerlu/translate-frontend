@@ -30,6 +30,9 @@ function Header(props){
                 <Link to="/logout">
                     <div>Logout</div>
                 </Link>
+                <Link to="/updateprofile">
+                    <div>Update Profile</div>
+                </Link>
             </nav>
         </header>
     )

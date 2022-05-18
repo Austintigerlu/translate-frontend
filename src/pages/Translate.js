@@ -3,13 +3,14 @@ import Textbox from "../components/translate/Textbox";
 import Swap from '../components/translate/Swap';
 import './Translate.css';
 import axios from "axios";
+import SavedTranslations from '../components/translate/SavedTranslations';
 
-
-function Translate(props) {
+function Translate(props){
   const [inputLanguage, setInputLanguage] = useState("af");
   const [outputLanguage, setOutputLanguage] = useState("af");
   const [textToTranslate, setTextToTranslate] = useState("");
   const [translatedText, setTranslatedText] = useState("");
+  const [savedTranslations, setSavedTranslations] = useState(props.currentUser.translations);
 
   // function swapLanguage() {
   //   setInputLanguage(outputLanguage);
@@ -18,7 +19,16 @@ function Translate(props) {
 
   console.log(inputLanguage)
   console.log(outputLanguage)
-  
+  function handleDelete(id, idx){
+    console.log(idx);
+    fetch(props.URL + `translations/${id}/`, {
+      method: 'DELETE'
+    })
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch((err) => console.log(err))
+  }
+
   function translateText(){
     const encodedParams = new URLSearchParams();
     encodedParams.append("q", textToTranslate);
@@ -44,10 +54,6 @@ function Translate(props) {
       console.error(error);
     });
   }
-  console.log(translatedText);
-  const translations = props.currentUser.translations;
-  console.log(translations)
-  const pastTranslations = translations.map((translation) => <h1>{translation.original_text + '=>' + translation.translated_text}</h1>)
   return (
     <div className='translate'>
       <Textbox 
@@ -69,7 +75,7 @@ function Translate(props) {
       <div className='translateButton'>
         <button onClick={translateText}>Translate</button>
       </div>
-      {pastTranslations}
+      <SavedTranslations currentUser={props.currentUser} handleDelete={handleDelete} translations={savedTranslations}/>
     </div>
   ) 
 }
