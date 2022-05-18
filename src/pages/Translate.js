@@ -5,7 +5,7 @@ import './Translate.css';
 import axios from "axios";
 
 
-function Translate() {
+function Translate(props) {
   const [inputLanguage, setInputLanguage] = useState("af");
   const [outputLanguage, setOutputLanguage] = useState("af");
   const [textToTranslate, setTextToTranslate] = useState("");
@@ -44,8 +44,10 @@ function Translate() {
       console.error(error);
     });
   }
-  console.log(translatedText)
-
+  console.log(translatedText);
+  const translations = props.currentUser.translations;
+  console.log(translations)
+  const pastTranslations = translations.map((translation) => <h1>{translation.original_text + '=>' + translation.translated_text}</h1>)
   return (
     <div className='translate'>
       <Textbox 
@@ -67,6 +69,7 @@ function Translate() {
       <div className='translateButton'>
         <button onClick={translateText}>Translate</button>
       </div>
+      {pastTranslations}
     </div>
   ) 
 }
