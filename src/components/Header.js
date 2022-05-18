@@ -27,6 +27,9 @@ function Header(props){
                 <Link to="/register">
                     <div>Register</div>
                 </Link>
+                <Link to="/logout">
+                    <div>Logout</div>
+                </Link>
             </nav>
         </header>
     )
