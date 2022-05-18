@@ -11,18 +11,22 @@ import Login from "./pages/Login";
 import Translate from "./pages/Translate"
 
 import './App.css';
+import Logout from "./pages/Logout";
+import { useState } from "react";
 
 function App() {
-  const URL= "https://pure-savannah-85557.herokuapp.com/"
+  const URL= "http://pure-savannah-85557.herokuapp.com/"
+  const [currentUser, setCurrentUser] = useState(null);
   return (
     <div className="App">
       <Header/>
       <Routes>
         <Route exact path="/" element={<Main/>}/>
-        <Route path="/IM" element={<IM URL={URL}/>}/>
+        <Route path="/IM" element={<IM URL={URL}  currentUser={currentUser}/>}/>
         <Route path="/register" element={<Register URL={URL}/>}/>
-        <Route path="/login" element={<Login URL={URL}/>}/>
-        <Route path="/translate" element={<Translate URL={URL}/>}/>
+        <Route path="/login" element={<Login URL={URL}  setCurrentUser={setCurrentUser}/>}/>
+        <Route path="/translate" element={<Translate URL={URL} currentUser={currentUser}/>}/>
+        <Route path="/logout" element={<Logout URL={URL}/>}/>
       </Routes>
       <Footer/>
     </div>
