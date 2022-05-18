@@ -13,6 +13,7 @@ import Translate from "./pages/Translate"
 import './App.css';
 import Logout from "./pages/Logout";
 import { useState } from "react";
+import UpdateProfile from "./pages/UpdateProfile";
 
 function App() {
   const URL= "http://pure-savannah-85557.herokuapp.com/"
@@ -27,6 +28,7 @@ function App() {
         <Route path="/login" element={<Login URL={URL}  setCurrentUser={setCurrentUser}/>}/>
         <Route path="/translate" element={<Translate URL={URL} currentUser={currentUser}/>}/>
         <Route path="/logout" element={<Logout URL={URL}/>}/>
+        <Route path='/updateprofile' element={<UpdateProfile URL={URL} currentUser={currentUser}/>}/>
       </Routes>
       <Footer/>
     </div>
