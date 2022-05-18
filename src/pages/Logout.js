@@ -4,7 +4,7 @@ function Logout() {
     async function handleLogout(e){
         e.preventDefault();
         localStorage.removeItem('token');
-        console.log('hello');
+        console.log(localStorage);
     }
     return (
         <div>
