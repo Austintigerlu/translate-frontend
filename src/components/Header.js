@@ -11,7 +11,7 @@ function Header(props){
 
     return (
         <header>
-            {user ? <LoginNav setCurrentUser={props.setCurrentUser}/>: <Nav/>}
+            {localStorage.getItem('user') ? <LoginNav URL={props.URL}currentUser={props.currentUser} setCurrentUser={props.setCurrentUser}/>: <Nav/>}
         </header>
     )
   } 

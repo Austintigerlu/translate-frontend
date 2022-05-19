@@ -32,9 +32,7 @@ function UpdateProfile(props) {
       setError(err)
     }
   }
-  console.log(currentUser)
-
-    return (
+return (
       <div>
         <div className="md:grid md:grid-cols-3 md:gap-6">
           <div className="md:col-span-1 md:mt-5 ml-5 border-solid border-4 border-black">
@@ -111,6 +109,6 @@ function UpdateProfile(props) {
       </div>
       </div>
     )
-  }
+}
   
   export default UpdateProfile;

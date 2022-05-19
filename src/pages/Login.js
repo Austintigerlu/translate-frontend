@@ -49,6 +49,7 @@ function Login(props) {
             .then(res => res.json())
             .then(userData => {
               console.log(userData);
+              localStorage.setItem('user', userData)
               return props.setCurrentUser(userData);
             })
             .catch(err => console.log(error))

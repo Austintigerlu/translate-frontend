@@ -28,7 +28,11 @@ function IM(props) {
     display.push(<Thread currentUser={props.currentUser} URL={props.URL} username={i} />)
     setAnything(display)
   }
-  useEffect(() => getMessages(), [])
+  useEffect(() => {
+    if(props.currentUser)
+      getMessages()
+    }, 
+  [])
   // let currentTime = Date()
   // messages.sort((a, b) => (a.createdAt - currentTime) (b.createdAt - currentTime));
 
@@ -61,7 +65,7 @@ function IM(props) {
       )
     }
   }
-  return (
+  return props.currentUser ? (
     <div className='IM'>
       <div className='side-bar'>
         {displayMessages}
@@ -75,7 +79,7 @@ function IM(props) {
         </div>
       </div>
     </div>
-  )
+  ) : <h2>You need to sign in to access this page</h2>
 }
   
   export default IM;
