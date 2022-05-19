@@ -44,8 +44,8 @@ const loaded = () => {
     )
   })
   return (
-    <div className="select">
-        <select onChange={handleChange}>
+    <div className="flex justify-center mb-3">
+        <select className="rounded-md w-full" onChange={handleChange}>
           {mapping}
         </select>
       </div>
