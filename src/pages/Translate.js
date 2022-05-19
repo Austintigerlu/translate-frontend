@@ -1,7 +1,6 @@
 import {useState} from 'react';
 import Textbox from "../components/translate/Textbox";
 import Swap from '../components/translate/Swap';
-import './Translate.css';
 import axios from "axios";
 import SavedTranslations from '../components/translate/SavedTranslations';
 
@@ -69,7 +68,7 @@ function Translate(props){
     });
   }
   return (
-    <div className='translate'>
+    <div className='flex justify-center items-center h-screen bg-slate-600'>
       <Textbox 
         selectedLanguage={setInputLanguage} 
         className='input'
@@ -77,19 +76,19 @@ function Translate(props){
         setText={setTextToTranslate} 
         setTranslatedText={setTranslatedText}
       />
-      <button className='swap-container'>  
-        <Swap/>
-      </button>
+      <div className="w-20 flex-col mr-5 items-end" >
+        <button className="mb-5 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={translateText}>Translate</button>
+        <button>  
+          <Swap/>
+        </button>
+        <button className="mt-5 ml-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={handleSave}>Save</button>
+      </div>
       <Textbox 
         selectedLanguage={setOutputLanguage} 
         translatedText={translatedText} 
    
         className='output'
       />
-      <div className='translateButton'>
-        <button onClick={translateText}>Translate</button>
-        <button onClick={handleSave}>Save Translation</button>
-      </div>
     </div>
   ) 
 }
