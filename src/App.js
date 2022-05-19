@@ -18,7 +18,7 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   return (
     <div className="App">
-      <Header currentUser={currentUser} setCurrentUser={setCurrentUser}/>
+      <Header URL={URL} currentUser={currentUser} setCurrentUser={setCurrentUser}/>
       <Routes>
         <Route exact path="/" element={<Main/>}/>
         <Route path="IM/" element={<IM URL={URL}  currentUser={currentUser}/>}/>

@@ -32,7 +32,7 @@ function UpdateProfile(props) {
       setError(err)
     }
   }
-    return (
+    return props.currentUser( 
       <div>
         <form onSubmit={(e) => handleUpdateProfile(e)}>
           <label htmlFor="username">Username: </label>
@@ -43,8 +43,8 @@ function UpdateProfile(props) {
           <input type="submit" value="Submit"/>
         </form>
         {error === "Success" ? <Navigate to="/"/>: <div>{error}</div>}
-      </div>
+      </div> 
     )
-  }
+}
   
   export default UpdateProfile;
