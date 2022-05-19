@@ -11,7 +11,6 @@ import Login from "./pages/Login";
 import Translate from "./pages/Translate"
 
 import './App.css';
-import Logout from "./pages/Logout";
 import { useState } from "react";
 import UpdateProfile from "./pages/UpdateProfile";
 
@@ -20,14 +19,13 @@ function App() {
   const [currentUser, setCurrentUser] = useState(null);
   return (
     <div className="App">
-      <Header/>
+      <Header currentUser={currentUser} setCurrentUser={setCurrentUser}/>
       <Routes>
         <Route exact path="/" element={<Main/>}/>
         <Route path="/IM" element={<IM URL={URL}  currentUser={currentUser}/>}/>
         <Route path="/register" element={<Register URL={URL}/>}/>
         <Route path="/login" element={<Login URL={URL}  setCurrentUser={setCurrentUser}/>}/>
         <Route path="/translate" element={<Translate URL={URL} currentUser={currentUser}/>}/>
-        <Route path="/logout" element={<Logout URL={URL}/>}/>
         <Route path='/updateprofile' element={<UpdateProfile URL={URL} currentUser={currentUser}/>}/>
       </Routes>
       <Footer/>
