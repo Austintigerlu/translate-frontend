@@ -11,10 +11,11 @@ function Translate(props){
   const [translatedText, setTranslatedText] = useState("");
   const [err, setErr] = useState(null)
 
-  // function swapLanguage() {
-  //   setInputLanguage(outputLanguage);
-  //   setOutputLanguage(inputLanguage);
-  // }
+  function swapLanguage() {
+    let input = inputLanguage;
+    setInputLanguage(outputLanguage);
+    setOutputLanguage(input);
+  }
 
   console.log(inputLanguage)
   console.log(outputLanguage)
@@ -78,7 +79,7 @@ function Translate(props){
       />
       <div className="w-20 flex-col mr-5 items-end" >
         <button className="mb-5 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={translateText}>Translate</button>
-        <button>  
+        <button onClick={swapLanguage}>  
           <Swap/>
         </button>
         <button className="mt-5 ml-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={handleSave}>Save</button>
