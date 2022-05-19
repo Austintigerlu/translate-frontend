@@ -1,5 +1,9 @@
 function Main() {
-    return <h1>Duo Amigo</h1>;
+    return (
+      <div>
+        <h1>Duo Amigo</h1>
+      </div>
+    )
   }
   
   export default Main;

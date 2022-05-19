@@ -9,9 +9,9 @@ function Nav(){
                     <div className="flex items-center">
                         <div className="flex-shrink-0">
                             <img
-                                className="h-8 w-8"
-                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                                alt="Workflow"
+                                className="h-10 w-10"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7SbA8TBp2raccCxTkIBWBr0sUG1eINmFNsA&usqp=CAU"
+                                alt="logo"
                             />
                         </div>
                         <div className="hidden md:block">
