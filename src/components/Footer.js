@@ -42,7 +42,7 @@ function Footer(props){
                   </svg>
                 </a>
                 <div className="mr-20 ml-20"></div>
-                <a href="" className="mr-3 mb-2">
+                <a href="https://www.linkedin.com/in/jesse-broxton/" className="mr-3 mb-2">
                 <svg
                   aria-hidden="true"
                   focusable="false"
@@ -59,7 +59,7 @@ function Footer(props){
                   ></path>
                 </svg>
                 </a>
-                <a href="" className="ml-3 mb-2">
+                <a href="https://github.com/scarletknight13" className="ml-3 mb-2">
                 <svg aria-hidden="true"
                   focusable="false"
                   data-prefix="fab"
