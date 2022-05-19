@@ -14,6 +14,8 @@ import './App.css';
 import Logout from "./pages/Logout";
 import { useState } from "react";
 import UpdateProfile from "./pages/UpdateProfile";
+import thread from "./pages/Thread";
+import Thread from "./pages/Thread";
 
 function App() {
   const URL= "http://pure-savannah-85557.herokuapp.com/"
@@ -23,7 +25,9 @@ function App() {
       <Header/>
       <Routes>
         <Route exact path="/" element={<Main/>}/>
-        <Route path="/IM" element={<IM URL={URL}  currentUser={currentUser}/>}/>
+        <Route path="IM/" element={<IM URL={URL}  currentUser={currentUser}/>}>
+          <Route path=':id' element={<Thread/>}/>
+        </Route>
         <Route path="/register" element={<Register URL={URL}/>}/>
         <Route path="/login" element={<Login URL={URL}  setCurrentUser={setCurrentUser}/>}/>
         <Route path="/translate" element={<Translate URL={URL} currentUser={currentUser}/>}/>

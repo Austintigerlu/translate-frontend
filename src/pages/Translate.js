@@ -10,7 +10,7 @@ function Translate(props){
   const [outputLanguage, setOutputLanguage] = useState("af");
   const [textToTranslate, setTextToTranslate] = useState("");
   const [translatedText, setTranslatedText] = useState("");
-  const [savedTranslations, setSavedTranslations] = useState(props.currentUser.translations);
+  const [err, setErr] = useState(null)
 
   // function swapLanguage() {
   //   setInputLanguage(outputLanguage);
@@ -19,16 +19,30 @@ function Translate(props){
 
   console.log(inputLanguage)
   console.log(outputLanguage)
-  function handleDelete(id, idx){
-    console.log(idx);
-    fetch(props.URL + `translations/${id}/`, {
-      method: 'DELETE'
-    })
-      .then(response => response.json())
-      .then(data => console.log(data))
-      .catch((err) => console.log(err))
+  async function handleSave(){
+    const newTranslation = {
+      original_text : textToTranslate,
+      translated_text : translatedText,
+      original_language: inputLanguage,
+      translated_language: outputLanguage
+    }
+    try{
+        console.log(props.URL+`translations/${props.currentUser._id}/new`);
+        const res = await fetch(props.URL+`/translations/${props.currentUser._id}/new`, {
+          method: "POST",
+          headers: { 
+            'Content-Type': "application/json"
+          },
+          body: JSON.stringify(newTranslation)
+        })
+        const data = res.json()
+        console.log(data)
+    }
+    catch(error){
+      console.log(error)
+      setErr(error)
+    }
   }
-
   function translateText(){
     const encodedParams = new URLSearchParams();
     encodedParams.append("q", textToTranslate);
@@ -74,8 +88,8 @@ function Translate(props){
       />
       <div className='translateButton'>
         <button onClick={translateText}>Translate</button>
+        <button onClick={handleSave}>Save Translation</button>
       </div>
-      <SavedTranslations currentUser={props.currentUser} handleDelete={handleDelete} translations={savedTranslations}/>
     </div>
   ) 
 }
