@@ -1,41 +1,19 @@
-import {Link} from "react-router-dom"
+import {useState, useEffect} from 'react'
+import LoginNav from './LoginNav'
+import Nav from "./Nav";
 
 function Header(props){
-    const navStyle = {
-        display: "flex",
-        justifyContent: "space-around",
-        border: "3px solid black",
-        padding: "8px",
-        width: "90%",
-        margin: "auto",
-      };
+    const [user, setUser] = useState(null)
+
+    useEffect(()=>{
+        setUser(props.currentUser)
+      }, [props.currentUser])
+
     return (
         <header>
-            <nav style={navStyle}>
-                <Link to="/IM">
-                    <div>Messaging</div>
-                </Link>
-                <Link to="/translate">
-                    <div>Translate</div>
-                </Link>
-                <Link to="/">
-                    <div>DuoAMIGOS</div>
-                </Link>
-                <Link to="/login">
-                    <div>Login</div>
-                </Link>
-                <Link to="/register">
-                    <div>Register</div>
-                </Link>
-                <Link to="/logout">
-                    <div>Logout</div>
-                </Link>
-                <Link to="/updateprofile">
-                    <div>Update Profile</div>
-                </Link>
-            </nav>
+            {user ? <LoginNav setCurrentUser={props.setCurrentUser}/>: <Nav/>}
         </header>
     )
   } 
   
-  export default Header
+export default Header
