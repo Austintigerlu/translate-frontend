@@ -1,3 +1,4 @@
+import logo from './logos/Duo Amigo-logos_transparent.png'
 import { Link } from "react-router-dom";
 
 function Nav(props){
@@ -17,12 +18,11 @@ function Nav(props){
                     <div className="flex items-center">
                         <div className="flex-shrink-0">
                             <img
-                                className="h-8 w-8"
-                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                                className="h-20 w-20"
+                                src={logo}
                                 alt="Workflow"
                             />
                         </div>
-                        <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
                             <Link to="/">
                                 <p className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">
@@ -39,6 +39,9 @@ function Nav(props){
                                     Translate
                                 </p>
                             </Link>
+                        </div>
+                        </div>
+                        <div className="mr-2 flex items-end space-x-4">
                             <Link to="/updateprofile">
                                 <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                                     Profile
@@ -50,8 +53,6 @@ function Nav(props){
                                 </p>
                             </button>
                         </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </nav>

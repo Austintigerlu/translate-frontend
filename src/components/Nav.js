@@ -1,3 +1,4 @@
+import logo from './logos/Duo Amigo-logos_transparent.png'
 import { Link } from "react-router-dom";
 
 function Nav(){
@@ -9,12 +10,11 @@ function Nav(){
                     <div className="flex items-center">
                         <div className="flex-shrink-0">
                             <img
-                                className="h-10 w-10"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7SbA8TBp2raccCxTkIBWBr0sUG1eINmFNsA&usqp=CAU"
+                                className="h-20 w-20"
+                                src={logo}
                                 alt="logo"
                             />
                         </div>
-                        <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
                             <Link to="/">
                                 <p className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium">
@@ -31,6 +31,9 @@ function Nav(){
                                     Translate
                                 </p>
                             </Link>
+                        </div>
+                        </div>
+                        <div className="mr-2 flex items-end space-x-4">
                             <Link to="/login">
                                 <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                                     Login
@@ -42,8 +45,6 @@ function Nav(){
                                 </p>
                             </Link>
                         </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </nav>

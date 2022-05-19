@@ -10,7 +10,6 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Translate from "./pages/Translate"
 
-import './App.css';
 import {useState} from "react";
 import UpdateProfile from "./pages/UpdateProfile";
 
