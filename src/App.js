@@ -14,8 +14,6 @@ import {useState} from "react";
 import UpdateProfile from "./pages/UpdateProfile";
 
 
-import Thread from "./pages/Thread";
-
 
 function App() {
   const URL= "http://pure-savannah-85557.herokuapp.com/"
