@@ -8,10 +8,24 @@ function Nav(props){
         e.preventDefault();
         const setUser = props.setCurrentUser
         localStorage.removeItem('token');
+        localStorage.removeItem('user')
         setUser(null);
         navigate('/login')
         }
-    
+    async function handleDeleteAccount(e){
+        console.log('made it')
+        console.log(props.URL+`users/${props.currentUser._id}`);
+        const res = await fetch(props.URL+`users/${props.currentUser._id}`, {
+        method: "DELETE",
+        })
+        const data = await res.json()
+        console.log('data ', data)
+        const setUser = props.setCurrentUser
+        localStorage.removeItem('token');
+        localStorage.removeItem('user')
+        setUser(null);
+    } 
+
     return (
     <>
         <nav className="bg-gray-800">
@@ -52,6 +66,11 @@ function Nav(props){
                             <button onClick={(e) => handleLogout(e)}>
                                 <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
                                     Logout
+                                </p>
+                            </button>
+                            <button onClick={(e) => handleDeleteAccount(e)}>
+                                <p className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                                    Delete Account
                                 </p>
                             </button>
                         </div>
