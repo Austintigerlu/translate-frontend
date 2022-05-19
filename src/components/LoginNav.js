@@ -1,13 +1,15 @@
 import logo from './logos/Duo Amigo-logos_transparent.png'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 
 function Nav(props){
-    
+    const navigate = useNavigate()
     async function handleLogout(e){
         e.preventDefault();
         const setUser = props.setCurrentUser
         localStorage.removeItem('token');
         setUser(null);
+        navigate('/login')
         }
     
     return (

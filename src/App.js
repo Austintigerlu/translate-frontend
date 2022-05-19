@@ -12,7 +12,7 @@ import Translate from "./pages/Translate"
 
 import {useState} from "react";
 import UpdateProfile from "./pages/UpdateProfile";
-import thread from "./pages/Thread";
+
 import Thread from "./pages/Thread";
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
         <Route path="/register" element={<Register URL={URL}/>}/>
         <Route path="/login" element={<Login URL={URL}  setCurrentUser={setCurrentUser}/>}/>
         <Route path="/translate" element={<Translate URL={URL} currentUser={currentUser}/>}/>
-        <Route path='/updateprofile' element={<UpdateProfile URL={URL} currentUser={currentUser}/>}/>
+        <Route path='/updateprofile' element={<UpdateProfile URL={URL} setCurrentUser={setCurrentUser} currentUser={currentUser}/>}/>
       </Routes>
       <Footer/>
     </div>
