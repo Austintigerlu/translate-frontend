@@ -19,7 +19,7 @@ function Header(props){
                     <div>Translate</div>
                 </Link>
                 <Link to="/">
-                    <div>TITLE</div>
+                    <div>DuoAMIGOS</div>
                 </Link>
                 <Link to="/login">
                     <div>Login</div>
