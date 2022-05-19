@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router';
 function Thread(props) {
-  const {username} = useParams()
+  const {username} = props
     // const displayMessages = messages.map((message) => {
     //     return (
     //       <div className={message.sender === currId ? 'left' : 'right'}>
@@ -10,6 +10,7 @@ function Thread(props) {
     //     )
     //   })
     async function handleSubmit(e){
+      console.log(username)
       e.preventDefault()
       const form = e.target;
       const message = {
@@ -29,7 +30,6 @@ function Thread(props) {
     }
   return (
     <div>
-      <h2>Thread</h2>
       <form onSubmit={handleSubmit}>
         <input type="text" required></input>
         <button type="submit">Send</button>
