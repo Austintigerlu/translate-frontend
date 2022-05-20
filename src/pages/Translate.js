@@ -28,7 +28,7 @@ function Translate(props){
     }
     try{
         console.log(props.URL+`translations/${props.currentUser._id}/new`);
-        const res = await fetch(props.URL+`/translations/${props.currentUser._id}/new`, {
+        const res = await fetch(props.URL+`translations/${props.currentUser._id}/new`, {
           method: "POST",
           headers: { 
             'Content-Type': "application/json"

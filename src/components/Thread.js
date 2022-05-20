@@ -27,12 +27,13 @@ function Thread(props) {
       })
       console.log('res: ', res)
       const data = await res.json();
+      props.getMessages();
     }
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" required></input>
-        <button type="submit">Send</button>
+      <form className='thread' onSubmit={handleSubmit}>
+        <input className='message-input' type="text" required placeholder='type here'></input>
+        <button className='send-button' type="submit">Send</button>
       </form>
     </div>
   )

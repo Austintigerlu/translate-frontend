@@ -1,13 +1,47 @@
 .IM{
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    height: 85vh;
+    justify-content: space-around;
     align-items: center;
+    background-color: lightblue;
+}
+.side-bar{
+    overflow: scroll;
+    width: 15vw;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.tab{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #030303;
+    line-height: 20px;
+    height: 5vh;
+    justify-content: flex-start;
+}
+.tab:hover{
+    background-color: hsl(0, 0%, 95%);
+}
+.message{
+    margin: 5% 0;
+}
+.message-container{
+    margin-top: 2%;
+}
+.message-input{
+    width: 80%;
+    height: 4vh;
+}
+.send-button{
+    width: 20%;
+    height: 4vh;
 }
 .message-display{
     flex-direction: column;
-    width: 35vw;
-    
+    height: 100%;
+    width: 55%;
 }
 .left, .right{
     /* width: fit-content; */
@@ -25,6 +59,16 @@
     display: flex;
     justify-content: center;
 }
-h1{
-
+.username-tag-container{
+    display: flex;
+    justify-content: center;
+}
+.username-tag{
+    font-size: 36;
+    font-weight: bolder;
+}
+.thread{
+    margin-top: 1%;
+    width: 100%;
+    display: flex;
 }

@@ -18,8 +18,8 @@ function UpdateProfile(props) {
     }
     try{
       console.log(user)
-      const res = await fetch(props.URL+`users/updateprofile/${props.currentUser._id}`, {
-        method: "POST",
+      const res = await fetch(props.URL+`users/${props.currentUser._id}`, {
+        method: "PUT",
         headers: {
           'Content-Type': "application/json"
         },
