@@ -17,14 +17,15 @@ This project is a two in one App that that helps users translate from different 
 
 A full stack MERN application with CRUD. Styled with Tailwind
 
+Backend: https://github.com/Austintigerlu/translate-backend
+
+API: https://rapidapi.com/googlecloud/api/google-translate1/
+
 ## User Experience
 1. The User starts on the home page and is given an option to checkout our translate feature, login, or register for an account.
 2. Users can only message and save translations when they have an account.
 3. Once a user is logged into their account they can edit their profile and have full functionality of our site.
 
-Backend: https://github.com/Austintigerlu/translate-backend
-
-API: https://rapidapi.com/googlecloud/api/google-translate1/
 
 ## Contribution Guidelines
 There are still some portions of this app that we aim to improve. We are still working to make the messaging fully functional, the ability for users to save translations, and making the app mobile friendly. Any contributions are greatly appreciated.
