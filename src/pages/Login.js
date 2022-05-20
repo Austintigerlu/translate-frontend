@@ -10,14 +10,14 @@ function Login(props) {
 
     const form = e.target;
     
-    console.log('form 0', form[0].value)
-    console.log('form 1', form[1].value)
+    //console.log('form 0', form[0].value)
+    //console.log('form 1', form[1].value)
     const user = {
       username: form[0].value,
       password: form[1].value
     }
     try{
-      console.log(user)
+      //console.log(user)
       const res = await fetch(props.URL+'users/login', {
         method: "POST",
         headers: {
@@ -25,9 +25,9 @@ function Login(props) {
         },
         body: JSON.stringify(user)
       })
-      console.log('res: ', res)
+      //console.log('res: ', res)
       const data = await res.json()
-      console.log('token: ', data);
+      //console.log('token: ', data);
       localStorage.setItem("token", data.token)
       setError(data.message)
     } catch(err){
@@ -43,12 +43,12 @@ function Login(props) {
     })
     .then(res => res.json())
     .then(data => {
-        console.log(data);
+        //console.log(data);
         if(data.isLoggedIn){
           fetch(props.URL + `users/get/${data.username}`)
             .then(res => res.json())
             .then(userData => {
-              console.log(userData);
+              //console.log(userData);
               localStorage.setItem('user', userData)
               return props.setCurrentUser(userData);
             })

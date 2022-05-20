@@ -17,8 +17,8 @@ function Translate(props){
     setOutputLanguage(input);
   }
 
-  console.log(inputLanguage)
-  console.log(outputLanguage)
+  //console.log(inputLanguage)
+  //console.log(outputLanguage)
   async function handleSave(){
     const newTranslation = {
       original_text : textToTranslate,
@@ -27,7 +27,7 @@ function Translate(props){
       translated_language: outputLanguage
     }
     try{
-        console.log(props.URL+`translations/${props.currentUser._id}/new`);
+        //console.log(props.URL+`translations/${props.currentUser._id}/new`);
         const res = await fetch(props.URL+`translations/${props.currentUser._id}/new`, {
           method: "POST",
           headers: { 
@@ -36,10 +36,10 @@ function Translate(props){
           body: JSON.stringify(newTranslation)
         })
         const data = res.json()
-        console.log(data)
+        //console.log(data)
     }
     catch(error){
-      console.log(error)
+      //console.log(error)
       setErr(error)
     }
   }

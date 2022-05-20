@@ -7,14 +7,14 @@ function IM(props) {
   const [messages, setMessages] = useState([])
   const [anything, setAnything] = useState([])
   function getMessages(){
-    console.log(props.URL+`messages/${props.currentUser._id}`)
+    //console.log(props.URL+`messages/${props.currentUser._id}`)
     fetch(props.URL+`messages/${props.currentUser._id}`, {
     })
       .then(res => {
-        console.log(res)
+        //console.log(res)
         return res.json()})
       .then(data => {
-        console.log(data)
+        //console.log(data)
         setMessages(data)})
       .catch(err => console.log(err))
     
@@ -25,7 +25,7 @@ function IM(props) {
     for(let idx of arr){
       display.push(<div className={idx.type === 'outgoing' ? 'left message-container' : 'right message-container'}><p className='message'>{idx.content}</p></div>)
     }
-    display.push(<Thread getMessages={getMessages}currentUser={props.currentUser} URL={props.URL} username={i} />)
+    display.push(<Thread getMessages={getMessages} currentUser={props.currentUser} URL={props.URL} username={i} />)
     setAnything(display)
   }
   // let currentTime = Date()
@@ -54,7 +54,7 @@ function IM(props) {
           }
         } 
       }
-      console.log(threads);
+      //console.log(threads);
       let temp = []
       for(let i in threads){
         temp.push(

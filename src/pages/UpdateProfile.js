@@ -17,7 +17,7 @@ function UpdateProfile(props) {
       profilePic: form[3].value
     }
     try{
-      console.log(user)
+      //console.log(user)
       const res = await fetch(props.URL+`users/${props.currentUser._id}`, {
         method: "PUT",
         headers: {
@@ -25,7 +25,7 @@ function UpdateProfile(props) {
         },
         body: JSON.stringify(user)
       })
-      console.log('res: ', res)
+      //console.log('res: ', res)
       const data = await res.json()
       setError(data.message)
     } catch(err){
