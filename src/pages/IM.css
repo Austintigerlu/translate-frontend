@@ -28,6 +28,8 @@
     text-align: center;
     margin: 5% 0;
     width: 95%;
+    font-size: medium;
+    font-weight: bold;
 }
 .message-container{
     margin-top: 2%;
