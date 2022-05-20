@@ -2,6 +2,8 @@
 
 created by Austin Lu and Jesse Broxton
 
+Website: https://main--duo-amigo.netlify.app/
+
 ## Description
 This project is a two in one App that that helps users translate from different languages and messaging other users.  
 
@@ -21,6 +23,7 @@ A full stack MERN application with CRUD. Styled with Tailwind
 3. Once a user is logged into their account they can edit their profile and have full functionality of our site.
 
 Backend: https://github.com/Austintigerlu/translate-backend
+
 API: https://rapidapi.com/googlecloud/api/google-translate1/
 
 ## Contribution Guidelines
