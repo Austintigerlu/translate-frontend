@@ -25,7 +25,9 @@
     background-color: hsl(0, 0%, 95%);
 }
 .message{
+    text-align: center;
     margin: 5% 0;
+    width: 95%;
 }
 .message-container{
     margin-top: 2%;
