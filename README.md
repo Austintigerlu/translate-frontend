@@ -21,6 +21,7 @@ A full stack MERN application with CRUD. Styled with Tailwind
 3. Once a user is logged into their account they can edit their profile and have full functionality of our site.
 
 Backend: https://github.com/Austintigerlu/translate-backend
+API: https://rapidapi.com/googlecloud/api/google-translate1/
 
 ## Contribution Guidelines
 There are still some portions of this app that we aim to improve. We are still working to make the messaging fully functional, the ability for users to save translations, and making the app mobile friendly. Any contributions are greatly appreciated.
