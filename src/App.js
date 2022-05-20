@@ -16,7 +16,7 @@ import UpdateProfile from "./pages/UpdateProfile";
 
 
 function App() {
-  const URL= "http://pure-savannah-85557.herokuapp.com/"
+  const URL= "https://pure-savannah-85557.herokuapp.com/"
   const [currentUser, setCurrentUser] = useState(null);
   return (
     <div className="App">
