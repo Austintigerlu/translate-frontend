@@ -45,7 +45,7 @@ return (
             </div>
           </div>
           <div className="mt-5 md:mt-5 mr-5 md:col-span-2 border-solid border-4 border-black">
-        <form onSubmit={(e) => handleUpdateProfile(e)}>
+          <form onSubmit={(e) => handleUpdateProfile(e)}>
         <div className="shadow sm:rounded-md sm:overflow-hidden">
           <div className="px-4 py-5 bg-white space-y-6 sm:p-6">
             <div className="grid grid-cols-3 gap-6">
