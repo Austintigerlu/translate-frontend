@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Duo Amigo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+created by Austin Lu and Jesse Broxton
 
-## Available Scripts
+Website: https://main--duo-amigo.netlify.app/
 
-In the project directory, you can run:
+## Description
+This project is a two in one App that that helps users translate from different languages and messaging other users.  
 
-### `npm start`
+<img width="1092" alt="Screen Shot 2022-05-20 at 9 12 23 AM" src="https://user-images.githubusercontent.com/101610362/169535554-f255fb7f-4069-44a5-b1ff-a18e1fb9f8d4.png">
+<img width="1080" alt="Screen Shot 2022-05-20 at 9 12 33 AM" src="https://user-images.githubusercontent.com/101610362/169535561-1932dd9a-740d-4bea-9e0f-325bbb0edc35.png">
+<img width="1089" alt="Screen Shot 2022-05-20 at 9 12 42 AM" src="https://user-images.githubusercontent.com/101610362/169535565-9cad6d63-31d0-4fde-9901-996c9d7ceb88.png">
+<img width="1088" alt="Screen Shot 2022-05-20 at 9 13 09 AM" src="https://user-images.githubusercontent.com/101610362/169535573-1961d97a-617c-43ee-84c8-7f0ba810cfe1.png">
+<img width="1092" alt="Screen Shot 2022-05-20 at 9 13 20 AM" src="https://user-images.githubusercontent.com/101610362/169535588-8f74e298-7fcd-4943-af9f-2f0972e594ae.png">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A full stack MERN application with CRUD. Styled with Tailwind
 
-### `npm test`
+Backend: https://github.com/Austintigerlu/translate-backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+API: https://rapidapi.com/googlecloud/api/google-translate1/
 
-### `npm run build`
+## User Experience
+1. The User starts on the home page and is given an option to checkout our translate feature, login, or register for an account.
+2. Users can only message and save translations when they have an account.
+3. Once a user is logged into their account they can edit their profile and have full functionality of our site.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contribution Guidelines
+There are still some portions of this app that we aim to improve. We are still working to make the messaging fully functional, the ability for users to save translations, and making the app mobile friendly. Any contributions are greatly appreciated.
